@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="js/main.js" defer></script>
+<link rel="stylesheet" href="css/main.css">
+<title>Weather Forcast</title>
+</head>
+<body>
+    <div id="bg">
+        <img src="images/snow-background.gif" alt="">
+    </div>
+    <div class="title">
+        <h1>Weather Dashboard</h1>
+    </div>
+    <div class="container">
+        <div class="gallery">
+            <section class="gallery__item gallery__item--1" id="current">
+                <div class="today-title">
+                    <h2 id="today-in">Today in: Fake Town</h2>
+                </div>
+                <div class="weather-info">
+                    <div class="weather-img td-img" >
+                        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="day 1 graphic" id="td-img-1">
+                    </div>
+                    <div class="td-status">
+                        <h3 id="td-status-1">Raining</h3>
+                    </div>
+                    <div class="td-info-1">
+                        <div class="td-temp">
+                            <h3 id="td-temp-now">47°F</h3>
+                            <p id="td-temp-hi">High: 50°F</p>
+                            <p id="td-temp-low">Low: 32°F</p>
+                        </div>
+                    </div>
+                    <div class="td-info-2">
+                        <div class="td-middle">
+                            <p id="td-temp-feel">Feels Like: 43°F</p>
+                            <p id="td-humidity">Humidity: 43%</p>
+                        </div>
+                    </div>
+                    <div class="td-info-3">
+                        <div class="td-wind">
+                            <img src="images/long-arrow-alt-up-solid.svg" alt="">
+                            <p id="td-wind-speed">Wind Speed: 50 MPH</p>
+                            <p id="td-wind-gust">Gusts: 60 MPH</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="gallery__item gallery__item--2" id="add-info">
+                <div class="location-title">
+                </div>
+                <div class="input-area">
+                    <div class="form-group">
+                        <form name="data" id="dataFora">
+                            <label for="input-zipcode">Zipcode</label>
+                        <input type="text" class="form-control form-control-lg" id="input-zipcode" placeholder="80201">
+                        <small id="emailHelp" class="form-text text-muted">Your location will be used to gather weather info</small>
+                        </form>
+                    </div>
+                    <button type="button" class="btn btn-info" onclick="getWeather()">Get Weather</button>
+                </div>
+            </section>
+            <section class="gallery__item gallery__item--3" id="5day">
+                <div class="five-day-title">
+                    <h2>Five Day Forcast</h2>
+                </div>
+
+                <div class="forcast-day-1">
+                    <div class="weather-img fd-1">
+                        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="day 1 graphic" id="fd-0-0">
+                    </div>
+                    <div class="weather-type fd-2">
+                        <h3 id="fd-0-1">Raining</h3>
+                    </div>
+                    <div class="temp fd-3">
+                        <p id="fd-0-2">High: 50°F</p>
+                        <p id="fd-0-3">Low: 32°F</p>
+                        <p id="fd-0-4">Winds: 2 MPH</p>
+                    </div>
+                </div>
+
+                <div class="forcast-day-2">
+                    <div class="weather-img fd-1">
+                        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="day 2 graphic" id="fd-1-0">
+                    </div>
+                    <div class="weather-type fd-2">
+                        <h3 id="fd-1-1">Raining</h3>
+                    </div>
+                    <div class="temp fd-3">
+                        <p id="fd-1-2">High: 50°F</p>
+                        <p id="fd-1-3">Low: 32°F</p>
+                        <p id="fd-1-4">Winds: 2 MPH</p>
+                    </div>
+                </div>
+
+                <div class="forcast-day-3">
+                    <div class="weather-img fd-1">
+                        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="day 3 graphic" id="fd-2-0">
+                    </div>
+                    <div class="weather-type fd-2">
+                        <h3 id="fd-2-1">Raining</h3>
+                    </div>
+                    <div class="temp fd-3">
+                        <p id="fd-2-2">High: 50°F</p>
+                        <p id="fd-2-3">Low: 32°F</p>
+                        <p id="fd-2-4">Winds: 2 MPH</p>
+                    </div>
+                </div>
+
+                <div class="forcast-day-4">
+                    <div class="weather-img fd-1">
+                        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="day 4 graphic" id="fd-3-0">
+                    </div>
+                    <div class="weather-type fd-2">
+                        <h3 id="fd-3-1">Raining</h3>
+                    </div>
+                    <div class="temp fd-3">
+                        <p id="fd-3-2">High: 50°F</p>
+                        <p id="fd-3-3">Low: 32°F</p>
+                        <p id="fd-3-4">Winds: 2 MPH</p>
+                    </div>
+                </div>
+
+                <div class="forcast-day-5">
+                    <div class="weather-img fd-1">
+                        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="day 5 graphic" id="fd-4-0">
+                    </div>
+                    <div class="weather-type fd-2">
+                        <h3 id="fd-4-1">Raining</h3>
+                    </div>
+                    <div class="temp fd-3">
+                        <p id="fd-4-2">High: 50°F</p>
+                        <p id="fd-4-3">Low: 32°F</p>
+                        <p id="fd-4-4">Winds: 2 MPH</p>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
