@@ -1,4 +1,4 @@
-const apiKey = ''
+const apiKey = '621347f8f1e487720e1bde45733e892d'
 // link for city search current forcast
 // api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 // link for zipcode search current forcast (will default to United States with no country code added)

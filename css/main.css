@@ -36,14 +36,14 @@ html{
     width: 20%;
 }
 .container{
-    width: 80%;
-    margin: 20px auto 20px auto;
+    margin: 20px 10% 20px 10%;
 }
 
 .gallery{
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 5% repeat(7, 1fr) 5%;
-    grid-template-rows: 5vh repeat(3, 5vw) 5vh 5vh repeat(3, 5vw) 5vh;
+    grid-template-columns: 5% repeat(7, 10vw) 5%;
+    grid-template-rows: 3vw repeat(3, 5vw) 3vw 3vw repeat(3, 5vw) 3vw;
 }
 
 .gallery__item--1{
@@ -57,8 +57,8 @@ html{
     border-top-left-radius: 10px;
     border-right: double black 5px;
     display: grid;
-    grid-template-columns: 5% repeat(7, 1fr) 5%;
-    grid-template-rows:3.5vw 4vw 6vw 4vw 2vw;
+    grid-template-columns: 2vw repeat(7, 7vw) 2vw;
+    grid-template-rows:3.5vw 4vw 6vw 4vw 3.1vw;
 }
 
 .today-title{
@@ -152,7 +152,7 @@ html{
     border-top-right-radius: 10px;
     display: grid;
     grid-template-columns: 5% 1fr 5%;
-    grid-template-rows:4vh 3vw repeat(2, 5vw) 9.5vh;
+    grid-template-rows:2.5vw 3vw repeat(2, 5vw) 4.5vw;
 }
 
 .location-title{
@@ -286,7 +286,7 @@ html{
     grid-row-start: 1;
     grid-row-end: 2;
     text-align: center;
-    padding-top: 2vh;
+    padding-top: 1vw;
 }
 
 .fd-1 img{
